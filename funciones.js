@@ -42,3 +42,27 @@ const ImageList = () => {
 export default ImageList;
 
 # Users
+
+const Login = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const handleLogin = async () => {
+        try {
+            const response = await axios.get('https://db-esi.vercel.app/api/users');
+            const users = response.data;
+
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                console.log('Login exitoso');
+            } else {
+                setError('Contraseña o usuario invalido');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setError('Un error ocurrió durante el login');
+        }
+    };
+};
