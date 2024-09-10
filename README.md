@@ -1,3 +1,3 @@
-* Funciones
+# Funciones
 
 Proyecto full stack
