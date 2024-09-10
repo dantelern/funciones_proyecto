@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 # Sopa de letras
 
 async function agarrarPalabras() {
@@ -40,6 +42,18 @@ const ImageList = () => {
 };
 
 export default ImageList;
+
+# Post
+
+const enviarPregunta = async () => {
+     try {
+        const response = await axios.post('https://db-esi.vercel.app/api/preguntas', {
+        pregunta: pregunta
+   }
+      catch (error) {
+          console.error('Error al enviar la pregunta:', error);
+          setMensaje('Error al enviar la pregunta');
+     }};
 
 # Users
 
