@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
 # Sopa de letras
 
@@ -43,7 +44,25 @@ const ImageList = () => {
 
 export default ImageList;
 
-# Post
+# Get (foro)
+
+const ListaPreguntas = () => {
+    const [preguntas, setPreguntas] = useState([]);
+
+    useEffect(() => {
+        const obtenerPreguntas = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/preguntas');
+                setPreguntas(response.data);
+            } catch (error) {
+                console.error('Error al obtener las preguntas:', error);
+            }
+        };
+
+        obtenerPreguntas();
+    }, []);
+
+# Post (foro)
 
 const enviarPregunta = async () => {
   try {
@@ -82,23 +101,3 @@ const Login = () => {
       setError('Un error ocurrió durante el login');
     }
   };
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Username"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      <button onClick={handleLogin}>Login</button>
-      {error && <p>{error}</p>}
-    </div>
-  );
-};
