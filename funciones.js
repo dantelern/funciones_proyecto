@@ -77,6 +77,24 @@ const enviarPregunta = async () => {
   }
 };
 
+# Get (foro)
+
+const ListaPreguntas = () => {
+    const [preguntas, setPreguntas] = useState([]);
+
+    useEffect(() => {
+        const obtenerPreguntas = async () => {
+            try {
+                const response = await axios.get('https://db-esi.vercel.app/api/preguntas'); 
+                setPreguntas(response.data);
+            } catch (error) {
+                console.error('Error al obtener las preguntas:', error);
+            }
+        };
+
+        obtenerPreguntas();
+    }, []); 
+
 # Users
 
 const Login = () => {
