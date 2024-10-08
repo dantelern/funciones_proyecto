@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-# Sopa de letras
+/// Sopa de letras
 
 async function agarrarPalabras() {
   try {
@@ -17,7 +17,7 @@ async function agarrarPalabras() {
 
 agarrarPalabras();
 
-# Memotest
+/// Memotest
 
 const ImageList = () => {
   const [images, setImages] = useState([]);
@@ -44,7 +44,7 @@ const ImageList = () => {
 
 export default ImageList;
 
-# Get (foro)
+/// Get (foro)
 
 const ListaPreguntas = () => {
     const [preguntas, setPreguntas] = useState([]);
@@ -62,24 +62,27 @@ const ListaPreguntas = () => {
         obtenerPreguntas();
     }, []);
 
-# Post (foro)
+  }
+
+
+/// Post (foro)
+
+const [pregunta, setPregunta] = useState('');
 
 const enviarPregunta = async () => {
   try {
-    const response = await axios.post('https://db-esi.vercel.app/api/preguntas', {
-      pregunta: pregunta
-    });
+    const response = await axios.post('https://db-esi.vercel.app/api/preguntas', { pregunta });
     console.log('Pregunta enviada:', response.data);
-  }
-  catch (error) {
+  } catch (error) {
     console.error('Error al enviar la pregunta:', error);
     setMensaje('Error al enviar la pregunta');
   }
 };
 
-# Get (foro)
 
-const ListaPreguntas = () => {
+/// Get (foro)
+
+const ListPreguntas = () => {
     const [preguntas, setPreguntas] = useState([]);
 
     useEffect(() => {
@@ -93,9 +96,12 @@ const ListaPreguntas = () => {
         };
 
         obtenerPreguntas();
-    }, []); 
+    }, []); }
 
-# Users
+console.log(ListPreguntas);
+console.log(ListaPreguntas);
+
+/// Users
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -117,5 +123,4 @@ const Login = () => {
     } catch (error) {
       console.error('Error:', error);
       setError('Un error ocurrió durante el login');
-    }
-  };
+    };};}
