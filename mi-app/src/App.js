@@ -2,6 +2,7 @@ import React from 'react';
 import ImageList from './ImageList';
 import ListaPreguntas from './ListaPreguntas';
 import Login from './Login';
+import InfoTercero from './InfoTercero';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Login />
       <ImageList />
       <ListaPreguntas />
+      <InfoTercero />
     </div>
   );
 }
