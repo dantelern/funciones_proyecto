@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const InfoTercero = () => {
+const InfoSegundo = () => {
   const [info, setInfo] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -9,7 +9,7 @@ const InfoTercero = () => {
   useEffect(() => {
     const obtenerInfo = async () => {
       try {
-        const { data } = await axios.get('https://db-esi.vercel.app/api/infoTercero');
+        const { data } = await axios.get('https://db-esi.vercel.app/api/infoSegundo');
         setInfo(data);
       } catch (error) {
         setError('Error al obtener la INFO: ' + error.message);
@@ -42,4 +42,4 @@ const InfoTercero = () => {
   );
 };
 
-export default InfoTercero;
+export default InfoSegundo;
