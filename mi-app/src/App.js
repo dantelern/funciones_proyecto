@@ -5,6 +5,9 @@ import Login from './Login';
 import InfoTercero from './InfoTercero';
 import InfoPrimero from './InfoPrimero';
 import InfoSegundo from './InfoSegundo';
+import { generateRandomScore } from './randomScore';
+
+const score = generateRandomScore();
 
 function App() {
   return (
@@ -16,6 +19,7 @@ function App() {
       <h1> Info Primero </h1> <InfoPrimero /> 
       <h1> Info Segundo </h1> <InfoSegundo /> 
       <h1> Info Tercero </h1> <InfoTercero /> 
+      <h2> Puntaje: {score}</h2>
     </div>
   );
 }
