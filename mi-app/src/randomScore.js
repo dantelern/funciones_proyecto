@@ -12,8 +12,7 @@ export function ScoreButton() {
         try {
             const response = await axios.post('https://db-esi.vercel.app/api/postMemotest', { score });
             console.log('Puntaje enviado:', response.data);
-            // Si quieres actualizar el puntaje después de enviarlo, usa setScore
-            setScore(generateRandomScore()); // Esto genera y asigna un nuevo puntaje
+            setScore(generateRandomScore()); 
         } catch (error) {
             console.error('Error al enviar el puntaje:', error);
         }
