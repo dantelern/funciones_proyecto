@@ -1,11 +1,12 @@
 import React from 'react';
-import ImageList from './ImageList.js';
-import ListaPreguntas from './ListaPreguntas.js';
-import Login from './Login.js';
-import InfoTercero from './InfoTercero.js';
-import InfoPrimero from './InfoPrimero.js';
-import InfoSegundo from './InfoSegundo.js';
-import { ScoreButton } from './randomScore.js';
+import ImageList from './ImageList';
+import ListaPreguntas from './ListaPreguntas';
+import Login from './Login';
+import InfoTercero from './InfoTercero';
+import InfoPrimero from './InfoPrimero';
+import InfoSegundo from './InfoSegundo';
+import { ScoreButton } from './randomScore';
+import { Timer } from './timer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <h1> Info Segundo </h1> <InfoSegundo /> 
       <h1> Info Tercero </h1> <InfoTercero /> 
       <ScoreButton />
+      <Timer />
     </div>
   );
 }
