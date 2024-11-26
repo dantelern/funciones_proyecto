@@ -7,7 +7,7 @@ const ObtenerPalabras = () => {
 
   const fetchPalabras = async () => {
     try {
-      const response = await axios.get('https://db-esi.vercel.app/puzzlewords');
+      const response = await axios.get('https://db-esi.vercel.app/api/puzzlewords');
       setPalabras(response.data);
     } catch (err) {
       setError('Hubo un error al obtener las palabras.');
