@@ -5,7 +5,7 @@ const ImageList = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get('https://db-esi.vercel.app')
+    axios.get('https://db-esi.vercel.app/api/card')
       .then(response => {
         const imageLinks = response.data.map(item => item.img);
         setImages(imageLinks);
