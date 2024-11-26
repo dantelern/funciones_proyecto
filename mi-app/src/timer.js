@@ -17,7 +17,7 @@ export function Timer() {
 
   const handleSendTime = async () => {
     try {
-      const response = await axios.post('https://db-esi.vercel.app/api/postSopaLetras', { time });
+      const response = await axios.post('https://db-esi.vercel.app/api/preguntas', { time });
       console.log('Tiempo enviado:', response.data);
       resetTimer();
     } catch (error) {
