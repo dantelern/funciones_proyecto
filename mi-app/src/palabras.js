@@ -28,7 +28,7 @@ const ObtenerPalabras = () => {
         <ul>
           {palabras.length > 0 ? (
             palabras.map((palabra, index) => (
-              <li key={index}>{palabra}</li>
+              <li key={palabra.id || index}>{palabra.word}</li>
             ))
           ) : (
             <p>Cargando palabras...</p>
