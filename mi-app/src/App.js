@@ -8,15 +8,17 @@ import InfoSegundo from './InfoSegundo';
 import { ScoreButton } from './randomScore';
 import { Timer } from './timer';
 import SubirPreguntas from './subirPregunta';
+import ObtenerPalabras from './palabras';
 
 function App() {
   return (
     <div>
-      <h1>Test de Componentes</h1>
+      <h1>SI A ESI</h1>
       <Login />
       <ImageList />
       <ListaPreguntas />
       <SubirPreguntas />
+      <h2> Palabras para la sopa de letras </h2> <ObtenerPalabras />
       <h1> Info Primero </h1> <InfoPrimero /> 
       <h1> Info Segundo </h1> <InfoSegundo /> 
       <h1> Info Tercero </h1> <InfoTercero /> 
