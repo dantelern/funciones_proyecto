@@ -10,14 +10,14 @@ const InfoTercero = () => {
     const obtenerInfo = async () => {
       try {
         const { data } = await axios.get('https://db-esi.vercel.app/api/infoTercero');
-        setInfo(data);
+        setInfo([data]);
       } catch (error) {
         setError('Error al obtener la INFO: ' + error.message);
       } finally {
         setLoading(false);
       }
     };
-
+  
     obtenerInfo();
   }, []);
 
@@ -32,14 +32,13 @@ const InfoTercero = () => {
   return (
     <ul>
       {info.length > 0 ? (
-        info.map((item) => (
-          <li key={item.id || item.text}>{item.text}</li> 
+        info.map((item, index) => (
+          <li key={index}>{item.infografia}</li>
         ))
       ) : (
         <p>No hay info para mostrar.</p>
       )}
     </ul>
-  );
-};
+  );}
 
 export default InfoTercero;
