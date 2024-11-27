@@ -15,7 +15,7 @@ const Login = () => {
 
       if (user) {
         console.log('Login exitoso');
-        setError(null); // Limpiar el error si el login es exitoso
+        setError(null);
       } else {
         setError('Contraseña o usuario inválido');
       }

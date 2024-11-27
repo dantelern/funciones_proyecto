@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageList from './ImageList';
 import ListaPreguntas from './ListaPreguntas';
-import Login from './Login';
 import InfoTercero from './InfoTercero';
 import InfoPrimero from './InfoPrimero';
 import InfoSegundo from './InfoSegundo';
@@ -14,7 +13,6 @@ function App() {
   return (
     <div>
       <h1>SI A ESI</h1>
-      <Login />
       <ImageList />
       <ListaPreguntas />
       <SubirPreguntas />
