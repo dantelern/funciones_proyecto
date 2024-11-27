@@ -33,14 +33,13 @@ const InfoPrimero = () => {
   return (
     <ul>
       {info.length > 0 ? (
-        info.map((item) => (
-          <li key={item.id || item.text}>{item.text}</li> 
+        info.map((item, index) => (
+          <li key={index}>{item.infografia}</li>
         ))
       ) : (
         <p>No hay info para mostrar.</p>
       )}
     </ul>
-  );
-};
+  );}
 
 export default InfoPrimero;
