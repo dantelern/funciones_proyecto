@@ -20,8 +20,6 @@ function App() {
       <h1> Info Primero </h1> <InfoPrimero /> 
       <h1> Info Segundo </h1> <InfoSegundo /> 
       <h1> Info Tercero </h1> <InfoTercero /> 
-      <ScoreButton />
-      <Timer />
     </div>
   );
 }
