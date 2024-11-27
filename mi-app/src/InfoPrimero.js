@@ -10,16 +10,17 @@ const InfoPrimero = () => {
     const obtenerInfo = async () => {
       try {
         const { data } = await axios.get('https://db-esi.vercel.app/api/infoPrimero');
-        setInfo(data);
+        setInfo([data]);
       } catch (error) {
         setError('Error al obtener la INFO: ' + error.message);
       } finally {
         setLoading(false);
       }
     };
-
+  
     obtenerInfo();
   }, []);
+  
 
   if (loading) {
     return <p style={{ fontWeight: 'bold' }}>Cargando...</p>;
